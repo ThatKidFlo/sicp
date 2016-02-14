@@ -4,7 +4,7 @@
 
 	489
 
-	#|	  Hello, there, I am a comment	
+	#|	Hello, there, I am a comment	
 	 |#
 
 	(+ 439 103)
@@ -12,20 +12,20 @@
 	(* 13 10)
 	(/ 12.4 3)
 
-	#| 	  The advantage of having a prefix notation include an 
+	#|		The advantage of having a prefix notation include an 
 	 |	arbitrarily long list of parameters
 	 |#
 
 	(+ 3 4 5 (+ 2 (+ 1 7)))
 	(* 25 4 12)
 
-	#|	  Pretty-printing implies the vertical alignment of operators
+	#|		Pretty-printing implies the vertical alignment of operators
 	 |#
 
 
 #| 1.1.2 - Naming, and the Environment |#
 
-	#|	  Define allows us to refer to compound by a simple name. It also 
+	#|		Define allows us to refer to compound by a simple name. It also 
 	 |	comes in handy in variable declaration.
 	 |# 
 	(define size 5)
@@ -41,16 +41,16 @@
 	(define circumference (* 2 pi radius))
 	circumference
 
-	#|  	The memory that keeps track of these name-value objects (i.e. 
+	#|		The memory that keeps track of these name-value objects (i.e. 
 	 |	variables) is called the environment (global environment, 
 	 |	more precisely)
 	 |#
 
 #| 1.1.3 - Evaluating Combinations |#
 
-	#|	  The general notion of environment provides a context in which
+	#|		The general notion of environment provides a context in which
 	 |	evaluation takes place. define is not a combination, as it merely
-	 |  associates names to values. It is a special form, an exception to 
+	 |	associates names to values. It is a special form, an exception to 
 	 |	the general evaluation rule.
 	 |		Each special form defines its own general evaluation rule, and
 	 |	all expressions, together with their evaluation rules form the 
@@ -58,4 +58,14 @@
 	 |#
 
 #| 1.1.4 - Compound Procedures |#
+	
+	#|	The general form of a procedure definition is
+	 |		(define (<name> <formal_parameters>) <body>)
+	 |
+	 |	The procedure definition is a more powerful abstraction, allowing us to
+	 |	give a name to a compound operation, and refer to it as a unit.
+	 |#
+
+	(define (square x) (* x x))
+	
 
